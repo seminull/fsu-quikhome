@@ -1,0 +1,31 @@
+body {
+  height: 100%;
+}
+
+#page-wrapper {
+  height: 100%;
+  width: 100%;
+  /*display: flex;
+  align-items: center;
+  justify-content: center;*/
+
+  padding: 15px;
+}
+
+#page-wrapper .row {
+
+}
+
+#page-wrapper .col {
+
+}
+
+#page-wrapper .section {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #EEE;
+}
+
+#page-wrapper .section.search {
+  background-color: #E1F5FE;
+}
