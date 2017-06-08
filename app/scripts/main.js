@@ -72,5 +72,45 @@
     });
   }
 
+  var urls = {
+    google: 'http://www.google.com/search',
+    images: 'http://images.google.com/images',
+    news: 'http://news.google.com/news',
+    groups: 'http://groups.google.com/groups',
+    froogle: 'http://froogle.google.com/froogle',
+    maps: 'http://maps.google.com/maps',
+    amazon: 'http://www.amazon.com',
+    youtube: 'http://www.youtube.com',
+  };
+
+  var getTerms = () => {
+    return $('#google-search').val();
+  };
+
   // Your custom JavaScript goes here
+  var quikhome = {
+    google: (e, which) => {
+      console.log(e, which);
+      e.preventDefault();
+      window.location = `${urls[which]}?q=${getTerms()}`;
+    },
+    url: e => {
+      e.preventDefault();
+      window.location = $('#url-box').val();
+    },
+    youtube: e => {
+      e.preventDefault();
+      window.location = `${urls.youtube}?q=${$('youtube-search').val()}`;
+    },
+    go: (e, which) => {
+      e.preventDefault();
+      window.location = `${urls[which]}`;
+    },
+    fsu: e => {
+      e.preventDefault();
+      window.location = `${urls.google}?q=site:fsu.edu ${getTerms()}`;
+    },
+  };
+
+  window.quikhome = quikhome;
 })();

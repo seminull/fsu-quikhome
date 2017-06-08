@@ -51,29 +51,29 @@
       <div class="container">
         <div class="row section search">
           <div class="col col-lg-12">
-            <form>
+            <form onSubmit="quikhome.google(event, 'google')">
               <div class="form-group">
                 <label for="google-search">Google</label>
                 <input type="text" class="form-control" id="google-search" placeholder="Search terms">
               </div>
               <div class="row">
                 <div class="col col-lg-2">
-                  <button class="btn btn-secondary btn-block">Images</button>
+                  <button class="btn btn-secondary btn-block" onClick="quikhome.google(event, 'images')">Images</button>
                 </div>
                 <div class="col col-lg-2">
-                  <button class="btn btn-secondary btn-block">News</button>
+                  <button class="btn btn-secondary btn-block" onClick="quikhome.google(event, 'news')">News</button>
                 </div>
                 <div class="col col-lg-2">
-                  <button class="btn btn-secondary btn-block">Groups</button>
+                  <button class="btn btn-secondary btn-block" onClick="quikhome.google(event, 'groups')">Groups</button>
                 </div>
                 <div class="col col-lg-2">
-                  <button class="btn btn-secondary btn-block">Froogle</button>
+                  <button class="btn btn-secondary btn-block" onClick="quikhome.google(event, 'froogle')">Froogle</button>
                 </div>
                 <div class="col col-lg-2">
-                  <button class="btn btn-secondary btn-block">Maps</button>
+                  <button class="btn btn-secondary btn-block" onClick="quikhome.google(event, 'maps')">Maps</button>
                 </div>
                 <div class="col col-lg-2">
-                  <button class="btn btn-secondary btn-block">FSU</button>
+                  <button class="btn btn-secondary btn-block" onClick="quikhome.fsu(event)">FSU</button>
                 </div>
               </div>
             </form>
@@ -82,7 +82,7 @@
 
         <div class="row section url">
           <div class="col col-lg-12">
-            <form>
+            <form onSubmit="quikhome.url(event)">
               <div class="form-group">
                 <label for="url-box">Go directly to url</label>
                 <input type="text" class="form-control" id="url-box" placeholder="">
@@ -91,51 +91,53 @@
           </div>
         </div>
 
-        <div class="row section fsu">
-          <div class="col col-lg-6 col-xs-12">
-            <form>
+        <div class="section row fsu" style="padding-bottom: 0px;">
+          <div class="col col-lg-6 col-sm-6 col-xs-12">
+            <form method="post" action="http://www.fsu.edu/cgi-bin/search/new/sframes">
               <div class="form-group">
                 <label for="fsu-people">FSU Faculty/Staff</label>
-                <input type="text" class="form-control" id="fsu-people" placeholder="">
+                <input type="text" class="form-control" id="fsu-people" name="KEYWORDS">
+                <input type="hidden" name="TYPE" value="PHF">
               </div>
             </form>
           </div>
 
-          <div class="col col-lg-6 col-xs-12">
-            <form>
+          <div class="col col-lg-6 col-sm-6 col-xs-12">
+            <form onSubmit="quikhome.youtube(event)">
               <div class="form-group">
                 <label for="youtube-search">Youtube</label>
                 <input type="text" class="form-control" id="youtube-search" placeholder="">
               </div>
             </form>
           </div>
-
-          <div class="col col-lg-6 col-xs-12">
-            <form>
+        </div>
+        <div class="row section fsu" style="padding-top: 0px;">
+          <div class="col col-lg-6 col-sm-6 col-xs-12">
+            <form name="nav1">
               <div class="form-group">
-                <select class="form-control">
-                  <option>Weather</option>
-                  <option value="">National Hurricane Center</option>
-                  <option value="">NOAA</option>
-                  <option value="">FSU Storm Alerts</option>
-                  <option value="">Weather.com</option>
+                <select class="form-control nav-to"  name="webpage" onChange="document.location.href=document.nav1.webpage.options[document.nav1.webpage.selectedIndex].value;">
+                  <option value="xx" selected>Weather
+                  <option value="http://www.nhc.noaa.gov">National Hurricane Center
+                  <option value="http://www.noaa.gov/">NOAA
+                  <option value="http://www.fsu.edu/~alerts/">FSU Storm Alerts
+                  <option value="http://www.weather.com">Weather.com
                 </select>
               </div>
             </form>
           </div>
 
-          <div class="col col-lg-6 col-xs-12">
-            <form class="form-inline">
+          <div class="col col-lg-6 col-sm-6 col-xs-12">
+            <form class="form-inline" name="nav2">
               <div class="form-group" style="width:100%;">
-                <select class="form-control" style="flex-grow: 1;">
-                  <option>Reference</option>
-                  <option value="">Mutt</option>
-                  <option value="">FreeBSD</option>
-                  <option value="">Linux</option>
-                  <option value="">Ruby</option>
-                  <option value="">RAA</option>
-                  <option value="">Perl</option>
-                  <option value="">HTML</option>
+                <select class="form-control nav-to" style="flex-grow: 1;" name="webpage" onChange="document.location.href=document.nav2.webpage.options[document.nav2.webpage.selectedIndex].value;">
+                  <option value="xx" selected>Reference
+                  <option value="http://www.mutt.org/doc/manual.txt">Mutt
+                  <option value="http://www.freebsd.org">FreeBSD
+                  <option value="http://www.tldp.org">Linux
+                  <option value="http://www.ruby-doc.org/">Ruby
+                  <option value="http://raa.ruby-lang.org/">RAA
+                  <option value="http://www.rexswain.com/perl5.html">Perl
+                  <option value="http://www.w3.org/TR/html4/index/elements.html">HTML
                 </select>
                 <a id="math-button" href="http://www.math.fsu.edu">m</a>
               </div>
@@ -149,7 +151,7 @@
               <div class="form-group">
                 <div class="row">
                   <div class="col col-lg-2">
-                    <button class="btn btn-secondary btn-block">Amazon</button>
+                    <button class="btn btn-secondary btn-block" onClick="quikhome.go(event, 'amazon')">Amazon</button>
                   </div>
                 </div>
               </div>
