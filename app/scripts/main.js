@@ -80,7 +80,8 @@
     froogle: 'http://froogle.google.com/froogle',
     maps: 'http://maps.google.com/maps',
     amazon: 'http://www.amazon.com',
-    youtube: 'http://www.youtube.com',
+    youtube: 'http://www.youtube.com/results',
+    wikipedia: 'http://www.wikipedia.com/wiki',
   };
 
   var getTerms = () => {
@@ -100,7 +101,11 @@
     },
     youtube: e => {
       e.preventDefault();
-      window.location = `${urls.youtube}?q=${$('youtube-search').val()}`;
+      window.location = `${urls.youtube}?q=${$('#youtube-search').val()}`;
+    },
+    wikipedia: e => {
+      e.preventDefault();
+      window.location = `${urls.wikipedia}/${$('#wikipedia-search').val()}`;
     },
     go: (e, which) => {
       e.preventDefault();

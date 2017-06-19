@@ -3,6 +3,7 @@ body {
 }
 
 #page-wrapper {
+  backgroud-color: #CCC;
   height: 100%;
   width: 100%;
   /*display: flex;
@@ -26,19 +27,23 @@ body {
 }
 
 #page-wrapper .section.search {
-  background-color: #E1F5FE;
+  /*background-color: #E1F5FE;*/
+  background-color: #EEE;
 }
 
 #page-wrapper .section.url {
-  background-color: #E8F5E9;
+  /*background-color: #E8F5E9;*/
+  background-color: #EEE;
 }
 
 #page-wrapper .section.fsu {
-  background-color: #FFEBEE;
+  /*background-color: #FFEBEE;*/
+  background-color: #EEE;
 }
 
 #page-wrapper .section.links {
-  background-color: #FFFDE7;
+  /*background-color: #FFFDE7;*/
+  background-color: #EEE;
 }
 
 #math-button {

@@ -63,8 +63,11 @@
                 <div class="col col-lg-2">
                   <button class="btn btn-secondary btn-block" onClick="quikhome.google(event, 'news')">News</button>
                 </div>
-                <div class="col col-lg-2">
+                <!-- <div class="col col-lg-2">
                   <button class="btn btn-secondary btn-block" onClick="quikhome.google(event, 'groups')">Groups</button>
+                </div> -->
+                <div class="col col-lg-2">
+                  <button class="btn btn-secondary btn-block" onClick="quikhome.google(event, 'youtube')">Youtube</button>
                 </div>
                 <div class="col col-lg-2">
                   <button class="btn btn-secondary btn-block" onClick="quikhome.google(event, 'froogle')">Froogle</button>
@@ -103,10 +106,10 @@
           </div>
 
           <div class="col col-lg-6 col-sm-6 col-xs-12">
-            <form onSubmit="quikhome.youtube(event)">
+            <form onSubmit="quikhome.wikipedia(event)">
               <div class="form-group">
-                <label for="youtube-search">Youtube</label>
-                <input type="text" class="form-control" id="youtube-search" placeholder="">
+                <label for="wikipedia-search"><a href="http://www.wikipedia.com">Wikipedia</a></label>
+                <input type="text" class="form-control" id="wikipedia-search" placeholder="">
               </div>
             </form>
           </div>
