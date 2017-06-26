@@ -97,7 +97,13 @@
     },
     url: e => {
       e.preventDefault();
-      window.location = $('#url-box').val();
+      let url = String($('#url-box').val());
+      if (/^https?:\/\//.test(url)) {
+        window.location = (url);
+      } else {
+        console.log('nope');
+        window.location = (`http://${url}`);
+      }
     },
     youtube: e => {
       e.preventDefault();
