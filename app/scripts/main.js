@@ -73,7 +73,7 @@
   }
 
   var urls = {
-    google: 'http://www.google.com/search',
+    google: 'https://www.google.com/search',
     images: 'http://images.google.com/images',
     news: 'http://news.google.com/news',
     groups: 'http://groups.google.com/groups',
