@@ -1,9 +1,10 @@
 body {
   height: 100%;
+  background-color: #CCC;
 }
 
 #page-wrapper {
-  backgroud-color: #CCC;
+  background-color: #CCC;
   height: 100%;
   width: 100%;
   /*display: flex;
@@ -11,6 +12,10 @@ body {
   justify-content: center;*/
 
   padding: 15px;
+}
+
+#page-wrapper .container {
+  border-radius: 5px;
 }
 
 #page-wrapper .row {
@@ -28,22 +33,24 @@ body {
 
 #page-wrapper .section.search {
   /*background-color: #E1F5FE;*/
-  background-color: #EEE;
+  background-color: #AAA;
+  border-radius: 5px 5px 0px 0px;
 }
 
 #page-wrapper .section.url {
   /*background-color: #E8F5E9;*/
-  background-color: #EEE;
+  background-color: #AAA;
 }
 
 #page-wrapper .section.fsu {
   /*background-color: #FFEBEE;*/
-  background-color: #EEE;
+  background-color: #AAA;
 }
 
 #page-wrapper .section.links {
   /*background-color: #FFFDE7;*/
-  background-color: #EEE;
+  background-color: #AAA;
+  border-radius: 0px 0px 5px 5px;
 }
 
 #math-button {
