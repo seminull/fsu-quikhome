@@ -101,8 +101,11 @@
       if (/^https?:\/\//.test(url)) {
         window.location = (url);
       } else {
-        console.log('nope');
-        window.location = (`http://${url}`);
+        if (/\.[\w]{2,4}$/.test(url)) {
+          window.location = (`http://${url}`);
+        } else {
+          window.location = (`http://${url}.com`);
+        }
       }
     },
     youtube: e => {
