@@ -1,10 +1,10 @@
 body {
   height: 100%;
-  background-color: #CCC;
+  background-color: #AAA;
 }
 
 #page-wrapper {
-  background-color: #CCC;
+  background-color: #AAA;
   height: 100%;
   width: 100%;
   /*display: flex;
@@ -33,23 +33,23 @@ body {
 
 #page-wrapper .section.search {
   /*background-color: #E1F5FE;*/
-  background-color: #AAA;
+  background-color: #999;
   border-radius: 5px 5px 0px 0px;
 }
 
 #page-wrapper .section.url {
   /*background-color: #E8F5E9;*/
-  background-color: #AAA;
+  background-color: #999;
 }
 
 #page-wrapper .section.fsu {
   /*background-color: #FFEBEE;*/
-  background-color: #AAA;
+  background-color: #999;
 }
 
 #page-wrapper .section.links {
   /*background-color: #FFFDE7;*/
-  background-color: #AAA;
+  background-color: #999;
   border-radius: 0px 0px 5px 5px;
 }
 
