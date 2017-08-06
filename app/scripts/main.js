@@ -82,6 +82,7 @@
     amazon: 'http://www.amazon.com',
     youtube: 'http://www.youtube.com/results',
     wikipedia: 'http://www.wikipedia.com/wiki',
+    fsudirectory: 'https://apps.its.fsu.edu/Directory/Directory.html',
   };
 
   var getTerms = () => {
@@ -124,6 +125,10 @@
       e.preventDefault();
       window.location = `${urls.google}?q=site:fsu.edu ${getTerms()}`;
     },
+    fsudirectory: e => {
+      e.preventDefault();
+      window.location = `${urls.fsudirectory}#result:N|${$('#fsu-people').val()}|||`;
+    }
   };
 
   window.quikhome = quikhome;

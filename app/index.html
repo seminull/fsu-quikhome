@@ -96,11 +96,10 @@
 
         <div class="section row fsu" style="padding-bottom: 0px;">
           <div class="col col-lg-6 col-sm-6 col-xs-12">
-            <form method="post" action="http://www.fsu.edu/cgi-bin/search/new/sframes">
+            <form onSubmit="quikhome.fsudirectory(event)">
               <div class="form-group">
                 <label for="fsu-people">FSU Faculty/Staff</label>
-                <input type="text" class="form-control" id="fsu-people" name="KEYWORDS">
-                <input type="hidden" name="TYPE" value="PHF">
+                <input type="text" class="form-control" id="fsu-people" />
               </div>
             </form>
           </div>
