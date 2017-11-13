@@ -74,10 +74,10 @@
 
   var urls = {
     google: 'https://www.google.com/search',
-    images: 'http://images.google.com/images',
-    news: 'http://news.google.com/news',
-    groups: 'http://groups.google.com/groups',
-    froogle: 'http://froogle.google.com/froogle',
+    images: 'https://images.google.com/images',
+    news: 'https://news.google.com/news',
+    groups: 'https://groups.google.com/groups',
+    froogle: 'https://www.google.com/search',
     maps: 'http://maps.google.com/maps',
     amazon: 'http://www.amazon.com',
     youtube: 'http://www.youtube.com/results',
@@ -92,9 +92,15 @@
   // Your custom JavaScript goes here
   var quikhome = {
     google: (e, which) => {
-      console.log(e, which);
       e.preventDefault();
-      window.location = `${urls[which]}?q=${getTerms()}`;
+      if (which === 'news') {
+        console.log('wtf');
+        window.location = `${urls[which]}/search/section/q/${getTerms()}`;
+      } else if (which === 'froogle') {
+        window.location = `${urls[which]}?tbm=shop&q=${getTerms()}`;
+      } else {
+        window.location = `${urls[which]}?q=${getTerms()}`;
+      }
     },
     url: e => {
       e.preventDefault();
