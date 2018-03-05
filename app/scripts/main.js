@@ -133,7 +133,7 @@
     },
     fsudirectory: e => {
       e.preventDefault();
-      window.location = `${urls.fsudirectory}#result:N|${$('#fsu-people').val()}|||`;
+      window.location = `${urls.fsudirectory}#result:N|${$('#fsu-people').val()}||||`;
     }
   };
 
